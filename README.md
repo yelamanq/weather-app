@@ -1,3 +1,7 @@
+# Brief Description
+
+This app is made by Yelaman Kulzhanov, the searched city weather conditions are showed and some extra functionalities like search, change the temperature unit are also included.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).

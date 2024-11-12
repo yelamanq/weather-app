@@ -1,38 +1,239 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter Tight';
+}
+
+:root {
+  --main: #546F91;
+}
+
+#root {
+  display: flex;
+}
+
 .App {
+  display: flex;
+  padding: 30px 100px;
+  width: 100%;
+  flex-direction: column;
+  background-image: url('./assets/images/clouds-background.svg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  height: 100vh;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+}
+
+.logoText {
+  font-size: 25px;
+  font-weight: 600;
+}
+
+.tempButton {
+  padding: 8px 10px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(255, 255, 255);
+}
+
+.tempIcon {
+  height: 25px;
+}
+
+.mainText {
   text-align: center;
+  font-size: 60px;
+  color: var(--main);
+  margin-top: 120px;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.search {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-top: 40px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.currLocButton {
+  padding: 8px 10px;
+  cursor: pointer;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(255, 255, 255);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.currLocIcon {
+  height: 25px;
+  margin-top: 2px;
+}
+
+.searchInput {
+  width: 580px;
+  padding: 14px 35px;
+  color: black;
+  font-weight: 300;
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(255, 255, 255);
+}
+.searchInput:focus {
+  outline: none;
+}
+.searchInput::placeholder {
+  color: #adadad;
+}
+
+.weather {
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  padding: 50px;
+  margin-top: 120px;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 16px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(255, 255, 255);
+}
+
+.currentWeather {
+  display: flex;
+  justify-content: space-between;
+}
+
+.weatherMainInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.city {
+  font-size: 35px;
+  font-weight: 600;
+  color: var(--main);
+}
+
+.weatherDescription {
+  display: flex;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.weatherIcon {
+  width: 60px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.description {
+  font-size: 20px;
+  color: var(--main);
 }
+
+.weatherExtraInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.extra {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.extraIcon {
+  height: 40px;
+}
+
+.extraText {
+  font-size: 20px;
+  color: var(--main);
+  font-weight: 500;
+}
+
+.forecastList {
+  display: flex;
+  flex-direction: row;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  gap: 20px;
+  margin-top: 50px;
+}
+.forecastList::-webkit-scrollbar {
+  display: none;
+}
+
+.forecastItem {
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  flex-shrink: 0;
+  width: 200px;
+
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.02);
+  backdrop-filter: blur(5.8px);
+  -webkit-backdrop-filter: blur(5.8px);
+  border: 1px solid rgba(255, 255, 255);
+}
+
+.forecastDate {
+  font-size: 18px;
+  font-weight: 600;
+  color: var(--main);
+}
+
+.forecastDesc {
+  display: flex;
+  align-items: center;
+}
+
+.forecastIcon {
+  height: 35px;
+}
+
+.forecastDescText {
+  font-size: 15px;
+  font-weight: 400;
+  margin-left: 5px;
+}
+
+.forecastTemp {
+  display: flex;
+  gap: 10px;
+}
+
+.tempMinMax {
+  display: flex;
+  gap: 5px;
+}
+
+.tempMinMaxIcon {
+  height: 15px;
+}
+
+.tempMinMaxText {
+  font-size: 14px;
+}
+
+
