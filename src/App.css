@@ -237,3 +237,62 @@
 }
 
 
+
+@media (max-width: 480px) {
+  .App {
+    padding: 30px 50px;
+  }
+  .mainText {
+    font-size: 50px;
+    margin-top: 80px;
+  }
+  .weather {
+    padding: 30px;
+  }
+  .city {
+    font-size: 24px;
+  }
+  .extraIcon {
+    height: 25px;
+  }
+  .extraText {
+    font-size: 16px;
+  }
+  .weatherExtraInfo {
+    gap: 10px;
+  }
+  .currentWeather {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .description {
+    font-size: 14px;
+  }
+  .weatherIcon {
+    width: 40px;
+  }
+  .searchInput {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .App {
+    padding: 30px 80px;
+  }
+  
+  .currentWeather {
+    gap: 30px;
+    flex-direction: column;
+  }
+  .searchInput {
+    max-width: 400px;
+  }
+  .extraIcon {
+    height: 25px;
+  }
+  .city {
+    text-wrap: wrap;
+    font-size: 26px;
+  }
+}

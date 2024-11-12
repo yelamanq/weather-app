@@ -25,7 +25,7 @@ const Weather = ({weatherInfo, tempUnit, forecastInfo}) => {
                 <div className="weatherMainInfo">
                     <h1 className="city">
                         <span>{weatherInfo.name}</span>
-                        <span style={{ marginLeft: '20px' }}>{temp}</span>
+                        <span style={{ marginLeft: '10px' }}>{temp}</span>
                     </h1>
                     <div className="weatherDescription">
                         <p className="description">{desc}</p>
@@ -38,7 +38,7 @@ const Weather = ({weatherInfo, tempUnit, forecastInfo}) => {
                         <p className="extraText">{weatherInfo.main.humidity}%</p>
                     </div>
                     <div className="extra">
-                        <img src={windIcon} style={{height: 35}} className="extraIcon" alt="" />
+                        <img src={windIcon} className="extraIcon" alt="" />
                         <p className="extraText">{weatherInfo.wind.speed.toFixed(1)} m/s</p>
                     </div>
                 </div>
